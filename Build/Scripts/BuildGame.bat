@@ -28,8 +28,9 @@ GOTO :Main
 
 :RunBuild
 	SET msbuildProcess="..\MSBuild\BuildGame.msbuild"
-	SET msbuildExe=%WINDIR%"\Microsoft.NET\Framework\v4.0.30319\msbuild"
+	SET msbuildExe="C:\Program Files (x86)\MSBuild\14.0\Bin\msbuild"
 
+	ECHO MSBuild.exe: %msbuildExe%
 	ECHO Build Configuration: %configuration%
 	ECHO Build Platform: %platform%
 
