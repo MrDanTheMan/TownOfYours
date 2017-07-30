@@ -1,0 +1,29 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0" DefaultTargets="BuildDebug64">
+  <PropertyGroup>
+    <GameProject>..\..\Source\TownOfYours.csproj</GameProject>
+  </PropertyGroup>
+	<Target Name="BuildDebug86">
+    <Message Text="Building game binaries [Debug: x86] ..." />
+    <RemoveDir Directories="$(DebugOutput86)" />
+    <MSBuild Projects="$(GameProject)" Targets="Rebuild" Properties="Configuration=Debug; Platform=x86"/>
+    <Message Text="Done !" />
+	</Target>
+  <Target Name="BuildDebug64">
+    <Message Text="Building game binaries [Debug: x64] ..." />
+    <RemoveDir Directories="$(DebugOutput64)" />
+    <MSBuild Projects="$(GameProject)" Targets="Rebuild" Properties="Configuration=Debug; Platform=x64"/>
+    <Message Text="Done !" />
+  </Target>
+  <Target Name="BuildRelease86">
+    <Message Text="Building game binaries [Release: x86] ..." />
+    <RemoveDir Directories="$(ReleaseOutput86)" />
+    <MSBuild Projects="$(GameProject)" Targets="Rebuild" Properties="Configuration=Release; Platform=x86"/>
+    <Message Text="Done !" />
+  </Target>
+  <Target Name="BuildRelease64">
+    <Message Text="Building game binaries [Release: x64] ..." />
+    <RemoveDir Directories="$(ReleaseOutput64)" />
+    <MSBuild Projects="$(GameProject)" Targets="Rebuild" Properties="Configuration=Release; Platform=x64"/>
+    <Message Text="Done !" />
+  </Target>
+</Project>

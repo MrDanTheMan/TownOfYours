@@ -2,20 +2,15 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
+	<MonoGamePlatform>Windows</MonoGamePlatform>
+	<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+	<ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{3D8D9041-FC4D-44AD-8175-8FF51E68AF15}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TownOfYours</RootNamespace>
     <AssemblyName>TownOfYours</AssemblyName>
-    <FileAlignment>512</FileAlignment>
-    <MonoGamePlatform>Windows</MonoGamePlatform>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-	<OutputPath>..\..\Bin\Game\Debug\x86\</OutputPath>
-    <BaseIntermediateOutputPath>..\..\Intermediate\Obj\</BaseIntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -27,6 +22,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <BaseIntermediateOutputPath>..\..\Intermediate\Obj\</BaseIntermediateOutputPath>
+	<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -54,6 +50,7 @@
     <Prefer32Bit>true</Prefer32Bit>
     <UseVSHostingProcess>true</UseVSHostingProcess>
     <BaseIntermediateOutputPath>..\..\Intermediate\Obj\</BaseIntermediateOutputPath>
+	<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
     <OutputPath>..\..\Bin\Game\Release\x64\</OutputPath>
